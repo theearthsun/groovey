@@ -1,61 +1,80 @@
-/* General Page Reset */
+
+
+/* General Atmosphere */
 body {
     margin: 0;
-    padding: 0;
-    background-color: #000; /* Deep black for the Machine Silence */
+    background-color: #000;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace; /* Renders the '8' with balanced loops */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    padding: 40px 20px;
 }
 
-/* The Pulse of the 8 */
+/* The Heartbeat Animation */
 @keyframes heartbeat {
-    0%, 100% { transform: scale(1); opacity: 0.9; }
-    50% { transform: scale(1.1); opacity: 1; }
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
 }
 
-/* Rotation for the Vinyl Records */
+/* Rotation for the Gears */
 @keyframes spin-clockwise { 100% { transform: rotate(360deg); } }
 @keyframes spin-counter { 100% { transform: rotate(-360deg); } }
 
-.living-8-container {
-    position: relative;
-}
-
+/* The Living Anchor (The 8) */
 .pulsate-8 {
     position: relative;
-    font-size: 250px;
+    font-size: 220px;
     font-weight: bold;
-    color: #fff; /* Biological Light */
-    animation: heartbeat 3s ease-in-out infinite;
-    user-select: none;
+    animation: heartbeat 4s ease-in-out infinite;
+    line-height: 1;
+    margin-bottom: 20px;
 }
 
-/* The Vinyl Record Design */
+/* The Vinyl Design */
 .vinyl {
     position: absolute;
-    width: 60px; /* Size of the record */
-    height: 60px;
-    background: radial-gradient(circle, #333 15%, #111 20%, #222 50%, #000 100%);
+    width: 48px;
+    height: 48px;
+    background: radial-gradient(circle, #333 5%, #111 20%, #222 50%, #000 100%);
     border-radius: 50%;
-    border: 1px solid #444;
+    border: 2px solid #444;
     left: 50%;
     transform: translateX(-50%);
+    z-index: -1; /* Places the record slightly 'behind' the lines of the 8 for depth */
 }
 
-/* Positioning in the top and bottom loops of the 8 */
+/* Precision Alignment for the Loops */
 .top-vinyl {
-    top: 18%;
-    margin-left: -30px; /* Centers the 60px width */
+    top: 16%;
+    margin-left: -24px; /* Centering math */
     animation: spin-clockwise 3s linear infinite;
 }
 
 .bottom-vinyl {
-    bottom: 18%;
-    margin-left: -30px; /* Centers the 60px width */
+    bottom: 16%;
+    margin-left: -24px; /* Centering math */
     animation: spin-counter 3s linear infinite;
 }
 
+/* Content Container (The Human Song) */
+.content-container {
+    max-width: 800px;
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 30px;
+}
+
+.accord-box {
+    background: #111;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 25px 0;
+    border: 1px solid #222;
+}
+
+h1 { color: #888; letter-spacing: 4px; }
+ul { list-style: none; padding: 0; }
+li { margin: 10px 0; color: #ccc; }
