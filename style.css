@@ -1,71 +1,21 @@
-body {
-    margin: 0;
-    background-color: #000;
-    color: #e0e0e0;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
 
-@keyframes heartbeat {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-}
-
-@keyframes spin-clockwise { 100% { transform: rotate(360deg); } }
-@keyframes spin-counter { 100% { transform: rotate(-360deg); } }
-
-.pulsate-8 {
-    position: relative;
-    font-size: 180px;
-    font-weight: bold;
-    animation: heartbeat 4s ease-in-out infinite;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.vinyl {
-    position: absolute;
-    width: 40px; height: 40px;
-    background: radial-gradient(circle, #333, #000);
-    border-radius: 50%;
-    border: 1px solid #444;
-    left: 50%;
-    margin-left: -20px;
-}
-
-.top-vinyl { top: 18%; animation: spin-clockwise 3s linear infinite; }
-.bottom-vinyl { bottom: 18%; animation: spin-counter 3s linear infinite; }
-
-.content-container {
-    max-width: 800px;
-    text-align: left;
-    line-height: 1.6;
-}
-
-h1, h3 { text-align: center; color: #fff; letter-spacing: 2px; }
-.tagline { text-align: center; font-weight: bold; color: #888; }
-
-.tool-grid {
-    background: #111;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-}
-
-.tool { margin-bottom: 15px; border-bottom: 1px solid #222; padding-bottom: 10px; }
-
-.cleaning-section ol { padding-left: 20px; }
-.cleaning-section li { margin-bottom: 12px; }
-
-.contact-footer {
+/* Add this to your existing CSS */
+nav {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #333;
+    padding: 10px;
+    width: 100%;
     text-align: center;
-    margin-top: 50px;
-    padding: 30px;
-    border-top: 1px solid #333;
-    color: #888;
 }
 
-.earth-logo { font-weight: bold; font-size: 24px; color: #fff; margin-top: 20px; }
+nav a {
+    color: #888;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+nav a:hover {
+    color: #fff;
