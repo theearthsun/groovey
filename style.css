@@ -1,6 +1,4 @@
-
-
-/* Master Styling for Pulsatin8 - Unified Scale & Faster Pulse */
+/* Master Styling for Pulsatin8 - The Interlaced Records */
 body { 
     margin: 0; 
     background-color: #000; 
@@ -12,96 +10,71 @@ body {
     min-height: 100vh; 
 }
 
-nav { 
-    width: 100%; 
-    padding: 30px 0; 
-    text-align: center; 
-    background: #0a0a0a; 
-    border-bottom: 1px solid #222; 
+nav { width: 100%; padding: 30px 0; text-align: center; background: #0a0a0a; border-bottom: 1px solid #222; }
+nav a { color: #888; text-decoration: none; margin: 0 20px; font-weight: bold; letter-spacing: 2px; font-size: 22px; }
+
+/* The Interlaced 8 Structure */
+.living-8-container {
+    margin-top: 60px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-nav a { 
-    color: #888; 
-    text-decoration: none; 
-    margin: 0 20px; 
-    font-weight: bold; 
-    letter-spacing: 2px; 
-    font-size: 22px; 
-    transition: 0.3s;
+.interlaced-8 {
+    position: relative;
+    width: 180px;
+    height: 310px;
+    animation: heartbeat 2s infinite ease-in-out;
 }
 
-nav a:hover { color: #fff; }
-
-.content-container { 
-    max-width: 1000px; 
-    padding: 40px 20px; 
-    text-align: center; 
-    font-size: 24px; 
-    line-height: 1.6; 
+/* The Record Design */
+.vinyl-record {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: #fff; /* White Records */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    animation: spin 3s linear infinite;
 }
 
-/* THE 8 - Faster Heartbeat (2s instead of 4s) */
+.top-record { top: 0; left: 10px; }
+.bottom-record { bottom: 0; left: 10px; animation-direction: reverse; }
+
+/* The Label and Hole */
+.label {
+    width: 60px;
+    height: 60px;
+    background: #000; /* Black Label */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hole {
+    width: 6px;
+    height: 6px;
+    background: #fff; /* White Center Hole */
+    border-radius: 50%;
+}
+
 @keyframes heartbeat { 
     0%, 100% { transform: scale(1); } 
-    50% { transform: scale(1.08); } 
+    50% { transform: scale(1.06); } 
 }
 @keyframes spin { 100% { transform: rotate(360deg); } }
 
-.pulsate-8 { 
-    position: relative; 
-    font-size: 220px; 
-    font-weight: 900; 
-    animation: heartbeat 2s infinite ease-in-out; /* FASTER PULSE */
-    line-height: 1; 
-    margin-top: 40px;
-    color: #fff;
-}
-
-/* THE VINYL - With White Labels and Black Holes */
-.vinyl { 
-    position: absolute; 
-    width: 55px; height: 55px; 
-    background: radial-gradient(circle, #333 10%, #111 100%); 
-    border-radius: 50%; 
-    border: 1px solid #444; 
-    left: 50%; 
-    margin-left: -27.5px; 
-    animation: spin 3s linear infinite; 
-    z-index: -1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* The White Label */
-.vinyl::before {
-    content: "";
-    width: 22px;
-    height: 22px;
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-}
-
-/* The Black Spindle Hole */
-.vinyl::after {
-    content: "";
-    width: 4px;
-    height: 4px;
-    background-color: #000;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;
-}
-
-.top-vinyl { top: 16%; }
-.bottom-vinyl { bottom: 16%; animation-direction: reverse; }
-
-/* Rest of the styling */
+/* Unified Content Font Size */
+.content-container { max-width: 1000px; padding: 40px 20px; text-align: center; font-size: 24px; line-height: 1.6; }
+h1 { font-size: 60px; letter-spacing: 5px; margin-top: 40px; }
 .cleaning-section { text-align: left; background: #0a0a0a; padding: 40px; border-radius: 15px; margin-top: 30px; border: 1px solid #222; }
-.cleaning-section p { margin-bottom: 25px; }
-h1 { font-size: 60px; letter-spacing: 5px; }
-h2 { font-size: 42px; margin-top: 50px; border-bottom: 2px solid #333; padding-bottom: 10px; }
+
 
 
 
