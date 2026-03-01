@@ -1,8 +1,9 @@
+/* Universal Reset */
+* { box-sizing: border-box; }
 
-/* Master Styling - Pulsatin8 Unified */
 body { 
     margin: 0; 
-    background-color: #000; 
+    background-color: #000 !important; /* Force the black background */
     color: #fff; 
     font-family: Arial, sans-serif; 
     display: flex; 
@@ -11,33 +12,16 @@ body {
     min-height: 100vh;
 }
 
-nav { 
-    width: 100%; 
-    padding: 30px 0; 
-    text-align: center; 
-    background: #0a0a0a; 
-    border-bottom: 1px solid #222; 
-}
+nav { width: 100%; padding: 30px 0; text-align: center; background: #0a0a0a; border-bottom: 1px solid #222; }
+nav a { color: #888; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 22px; }
 
-nav a { 
-    color: #888; 
-    text-decoration: none; 
-    margin: 0 20px; 
-    font-weight: bold; 
-    letter-spacing: 2px; 
-    font-size: 22px; 
-}
-
-nav a:hover { color: #fff; }
-
-/* The Interlaced Record Structure */
+/* The Interlaced 8 Animation */
 .living-8-container {
     margin: 40px 0;
     height: 350px;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .interlaced-8 {
@@ -51,54 +35,28 @@ nav a:hover { color: #fff; }
     position: absolute;
     width: 160px;
     height: 160px;
-    background: #ffffff; /* The White Record Body */
+    background: #ffffff; 
     border-radius: 50%;
     left: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     animation: spin 3s linear infinite;
-    box-shadow: 0 0 20px rgba(255,255,255,0.3);
 }
 
 .top-record { top: 0; }
 .bottom-record { bottom: 0; animation-direction: reverse; }
 
-/* The Black Label and White Hole */
-.label {
-    width: 50px;
-    height: 50px;
-    background: #000;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.label { width: 50px; height: 50px; background: #000; border-radius: 50%; display: flex; justify-content: center; align-items: center; }
+.hole { width: 6px; height: 6px; background: #fff; border-radius: 50%; }
 
-.hole {
-    width: 6px;
-    height: 6px;
-    background: #fff;
-    border-radius: 50%;
-}
-
-@keyframes heartbeat { 
-    0%, 100% { transform: scale(1); } 
-    50% { transform: scale(1.05); } 
-}
+@keyframes heartbeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
 @keyframes spin { 100% { transform: rotate(360deg); } }
 
-/* Content Text Unified */
-.content-container { 
-    max-width: 1000px; 
-    padding: 40px 20px; 
-    text-align: center; 
-    font-size: 24px; 
-    line-height: 1.6; 
-}
-
+.content-container { max-width: 1000px; padding: 40px 20px; text-align: center; font-size: 24px; }
 h1 { font-size: 60px; letter-spacing: 5px; }
-.tool-grid { text-align: left; background: #111; padding: 30px; border-radius: 15px; border: 1px solid #222; }
+.tool-grid { text-align: left; background: #111; padding: 30px; border-radius: 15px; border: 1px solid #222; margin-top: 20px; }
+
 
 
 
