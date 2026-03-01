@@ -1,3 +1,6 @@
+/* Universal Reset & Global Font Lock */
+* { box-sizing: border-box; }
+
 body { 
     margin: 0; 
     background-color: #000; 
@@ -8,82 +11,119 @@ body {
     align-items: center; 
     min-height: 100vh;
     overflow-x: hidden;
+    /* This ensures every page starts with a strong presence */
+    font-size: 24px; 
 }
 
-nav { width: 100%; padding: 30px 0; text-align: center; background: #0a0a0a; border-bottom: 1px solid #222; }
-nav a { color: #888; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 18px; letter-spacing: 1px; }
+/* Navigation - Large and Clear on all Pages */
+nav { 
+    width: 100%; 
+    padding: 30px 0; 
+    text-align: center; 
+    background: #0a0a0a; 
+    border-bottom: 1px solid #222; 
+}
 
-/* The Universe of the 8 */
+nav a { 
+    color: #888; 
+    text-decoration: none; 
+    margin: 0 20px; 
+    font-weight: bold; 
+    font-size: 22px; 
+    letter-spacing: 2px;
+}
+
+nav a:hover { color: #fff; }
+
+/* The Orbital Universe - Consistent on Laptop and Mobile */
 .universe-container {
     position: relative;
-    width: 320px;
-    height: 380px;
+    width: 500px;
+    height: 500px;
     margin: 40px auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Orbiting Text Logic */
 .orbiting-text {
     position: absolute;
-    width: 350px;
-    height: 350px;
+    width: 100%;
+    height: 100%;
     animation: spin-clockwise 20s linear infinite;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* This creates the circular path for the letters */
 .orbiting-text span {
-    font-size: 22px;
+    font-size: 28px;
     font-weight: bold;
-    letter-spacing: 5px;
+    letter-spacing: 8px;
     color: #fff;
-    white-space: nowrap;
+    text-transform: uppercase;
 }
 
 /* The Interlaced Records */
 .interlaced-8 {
     position: absolute;
-    width: 140px;
-    height: 250px;
+    width: 180px;
+    height: 320px;
     animation: heartbeat 2s infinite ease-in-out;
     z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .vinyl-record {
-    position: absolute;
-    width: 130px;
-    height: 130px;
+    width: 160px;
+    height: 160px;
     background: #fff; 
     border-radius: 50%;
-    left: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     animation: spin-clockwise 3s linear infinite;
-    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    box-shadow: 0 0 25px rgba(255,255,255,0.4);
 }
 
-.top-record { top: 0; }
-.bottom-record { bottom: 0; animation-direction: reverse; }
+.bottom-record { animation-direction: reverse; }
 
-.label { width: 40px; height: 40px; background: #000; border-radius: 50%; display: flex; justify-content: center; align-items: center; }
-.hole { width: 4px; height: 4px; background: #fff; border-radius: 50%; }
+.label { width: 50px; height: 50px; background: #000; border-radius: 50%; display: flex; justify-content: center; align-items: center; }
+.hole { width: 6px; height: 6px; background: #fff; border-radius: 50%; }
 
-/* Animations */
+/* Content Section - Unified Power for Cleaning & Contact Pages */
+.content-container { 
+    max-width: 1000px; 
+    padding: 40px 20px; 
+    text-align: center; 
+    /* This keeps the text large on Cleaning and Contact pages */
+    font-size: 26px; 
+    line-height: 1.6; 
+}
+
+h2 { font-size: 42px; margin-bottom: 30px; border-bottom: 2px solid #333; padding-bottom: 10px; }
+
+.cleaning-section, .tool-grid { 
+    text-align: left; 
+    background: #0a0a0a; 
+    padding: 40px; 
+    border-radius: 15px; 
+    border: 1px solid #222; 
+    margin-top: 20px;
+}
+
+/* Keyframes */
 @keyframes heartbeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
 @keyframes spin-clockwise { 100% { transform: rotate(360deg); } }
 
-/* Content Section */
-.content-container { max-width: 900px; padding: 20px; text-align: center; font-size: 22px; }
-.tool-grid { text-align: left; background: #111; padding: 25px; border-radius: 15px; border: 1px solid #222; margin-top: 20px; }
-
-/* Mobile Scaling */
-@media (max-width: 480px) {
-    .universe-container { transform: scale(0.85); }
-    .content-container { font-size: 18px; }
+/* Mobile Adjustment */
+@media (max-width: 600px) {
+    .universe-container { transform: scale(0.7); margin: 10px auto; }
+    .content-container { font-size: 20px; }
+    nav a { font-size: 18px; margin: 0 10px; }
 }
 
 
