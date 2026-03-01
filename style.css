@@ -1,4 +1,4 @@
-/* Universal Reset & Global Font Lock */
+/* Universal Reset */
 * { box-sizing: border-box; }
 
 body { 
@@ -11,120 +11,83 @@ body {
     align-items: center; 
     min-height: 100vh;
     overflow-x: hidden;
-    /* This ensures every page starts with a strong presence */
-    font-size: 24px; 
 }
 
-/* Navigation - Large and Clear on all Pages */
-nav { 
-    width: 100%; 
-    padding: 30px 0; 
-    text-align: center; 
-    background: #0a0a0a; 
-    border-bottom: 1px solid #222; 
-}
+nav { width: 100%; padding: 30px 0; text-align: center; background: #0a0a0a; border-bottom: 1px solid #222; }
+nav a { color: #888; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 22px; }
 
-nav a { 
-    color: #888; 
-    text-decoration: none; 
-    margin: 0 20px; 
-    font-weight: bold; 
-    font-size: 22px; 
-    letter-spacing: 2px;
-}
-
-nav a:hover { color: #fff; }
-
-/* The Orbital Universe - Consistent on Laptop and Mobile */
-.universe-container {
-    position: relative;
-    width: 500px;
-    height: 500px;
-    margin: 40px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.orbiting-text {
-    position: absolute;
+/* The Header Section */
+.main-header {
+    text-align: center;
+    margin-top: 40px;
     width: 100%;
-    height: 100%;
-    animation: spin-clockwise 20s linear infinite;
+    padding: 0 20px;
+}
+
+h1 { 
+    font-size: clamp(32px, 8vw, 64px); /* Scales perfectly between mobile and laptop */
+    letter-spacing: 5px; 
+    margin: 0;
+}
+
+.tagline { font-size: 20px; color: #888; margin-top: 10px; letter-spacing: 2px; }
+
+/* The Interlaced 8 Container */
+.living-8-container {
+    margin: 40px 0;
+    height: 320px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* This creates the circular path for the letters */
-.orbiting-text span {
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: 8px;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-/* The Interlaced Records */
 .interlaced-8 {
-    position: absolute;
-    width: 180px;
-    height: 320px;
+    position: relative;
+    width: 160px;
+    height: 280px;
     animation: heartbeat 2s infinite ease-in-out;
-    z-index: 5;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .vinyl-record {
-    width: 160px;
-    height: 160px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
     background: #fff; 
     border-radius: 50%;
+    left: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: spin-clockwise 3s linear infinite;
-    box-shadow: 0 0 25px rgba(255,255,255,0.4);
+    animation: spin 3s linear infinite;
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
 }
 
-.bottom-record { animation-direction: reverse; }
+.top-record { top: 0; }
+.bottom-record { bottom: 0; animation-direction: reverse; }
 
-.label { width: 50px; height: 50px; background: #000; border-radius: 50%; display: flex; justify-content: center; align-items: center; }
-.hole { width: 6px; height: 6px; background: #fff; border-radius: 50%; }
+.label { width: 45px; height: 45px; background: #000; border-radius: 50%; display: flex; justify-content: center; align-items: center; }
+.hole { width: 5px; height: 5px; background: #fff; border-radius: 50%; }
 
-/* Content Section - Unified Power for Cleaning & Contact Pages */
+@keyframes heartbeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* Content Section - Unified Large Font for all pages */
 .content-container { 
     max-width: 1000px; 
     padding: 40px 20px; 
     text-align: center; 
-    /* This keeps the text large on Cleaning and Contact pages */
-    font-size: 26px; 
+    font-size: 24px; 
     line-height: 1.6; 
 }
 
-h2 { font-size: 42px; margin-bottom: 30px; border-bottom: 2px solid #333; padding-bottom: 10px; }
-
-.cleaning-section, .tool-grid { 
+.tool-grid, .cleaning-section { 
     text-align: left; 
-    background: #0a0a0a; 
-    padding: 40px; 
+    background: #111; 
+    padding: 30px; 
     border-radius: 15px; 
     border: 1px solid #222; 
-    margin-top: 20px;
 }
 
-/* Keyframes */
-@keyframes heartbeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
-@keyframes spin-clockwise { 100% { transform: rotate(360deg); } }
-
-/* Mobile Adjustment */
-@media (max-width: 600px) {
-    .universe-container { transform: scale(0.7); margin: 10px auto; }
-    .content-container { font-size: 20px; }
-    nav a { font-size: 18px; margin: 0 10px; }
-}
 
 
 
