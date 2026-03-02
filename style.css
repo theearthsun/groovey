@@ -14,7 +14,6 @@ body {
     font-size: 24px; 
 }
 
-/* The Sovereign Header - For the Love of Vinyl */
 .tribute-header {
     width: 100%;
     text-align: center;
@@ -28,7 +27,6 @@ body {
     font-weight: bold;
 }
 
-/* Navigation - Gold on Black */
 nav { 
     width: 100%; 
     padding: 30px 0; 
@@ -47,7 +45,6 @@ nav a {
 
 nav a:hover { color: #e6c66a; }
 
-/* The Vinyl Artifact (The Grooved Record) */
 .vinyl-artifact {
     position: relative;
     max-width: 1000px;
@@ -55,7 +52,6 @@ nav a:hover { color: #e6c66a; }
     padding: 60px 40px;
     border-radius: 50%;
     background: #0a0a0a;
-    /* This creates the visual grooves in the black surface */
     box-shadow: 
         0 0 0 10px #0a0a0a,
         0 0 0 30px #050505,
@@ -69,88 +65,33 @@ nav a:hover { color: #e6c66a; }
     border: 3px solid #e6c66a;
 }
 
-h1 { 
-    font-size: 64px; 
-    color: #e6c66a; 
-    letter-spacing: 5px; 
-    text-transform: uppercase; 
-    margin: 0; 
-}
+h1 { font-size: 64px; color: #e6c66a; letter-spacing: 5px; text-transform: uppercase; margin: 0; }
+.tagline { font-size: 22px; color: #fff; margin-top: 10px; }
 
-.tagline { 
-    font-size: 22px; 
-    color: #fff; 
-    margin-top: 10px; 
-}
+.interlaced-8 { width: 140px; height: 250px; animation: heartbeat 2s infinite ease-in-out; margin: 40px 0; }
+.vinyl-record { width: 130px; height: 130px; background: #fff; border-radius: 50%; animation: spin 3s linear infinite; box-shadow: 0 0 20px rgba(255,255,255,0.4); display: flex; justify-content: center; align-items: center;}
+.label { width: 45px; height: 45px; background: #000; border-radius: 50%; display: flex; justify-content: center; align-items: center; }
+.hole { width: 5px; height: 5px; background: #fff; border-radius: 50%; }
 
-/* The Interlaced Records */
-.interlaced-8 { 
-    width: 140px; 
-    height: 250px; 
-    animation: heartbeat 2s infinite ease-in-out; 
-    margin: 40px 0; 
-}
+.content-container { width: 100%; color: #fff; margin-top: 20px; text-align: center; }
+.tool-grid p { font-size: 24px; margin-bottom: 25px; font-weight: bold; line-height: 1.5; }
 
-.vinyl-record { 
-    width: 130px; 
-    height: 130px; 
-    background: #fff; 
-    border-radius: 50%; 
-    animation: spin 3s linear infinite; 
-    box-shadow: 0 0 20px rgba(255,255,255,0.4); 
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-}
-
-.label { 
-    width: 45px; 
-    height: 45px; 
-    background: #000; 
-    border-radius: 50%; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-}
-
-.hole { 
-    width: 5px; 
-    height: 5px; 
-    background: #fff; 
-    border-radius: 50%; 
-}
-
-/* The Chromatic Protocol - Colored Job Text */
-.content-container { 
-    width: 100%; 
-    color: #fff; 
-    margin-top: 20px; 
-    text-align: center;
-}
-
-.tool-grid p { 
-    font-size: 24px; 
-    margin-bottom: 25px; 
-    font-weight: bold; 
-    line-height: 1.5;
-}
-
-/* Specific Frequencies */
+/* The Chromatic Shift */
 .color-bb { color: #ff0000; } /* RED */
-.color-ab { color: #adff2f; text-shadow: 2px 0 #ffff00; } /* YELLOW-GREEN Blend */
+.color-ab-yellow { color: #ffff00; } /* YELLOW */
+.color-ab-green { color: #00ff00; } /* GREEN */
 .color-pp { color: #00bfff; } /* BLUE */
 .color-ap { color: #ffff00; } /* BRIGHT YELLOW */
 
-/* Animations */
 @keyframes heartbeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
 @keyframes spin { 100% { transform: rotate(360deg); } }
 
-/* Mobile Scaling - Maintaining the Pop */
 @media (max-width: 600px) {
     .vinyl-artifact { transform: scale(0.65); margin: 20px 0; }
     h1 { font-size: 38px; }
-    .tribute-header { font-size: 12px; letter-spacing: 3px; }
 }
+
+
 
 
 
