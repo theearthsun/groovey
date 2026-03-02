@@ -1,106 +1,96 @@
-/* Universal Reset */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Universal Reset & Biological Light Shift */
 * { box-sizing: border-box; }
 
 body { 
     margin: 0; 
-    background-color: #000; 
-    color: #fff; 
+    background-color: #050505; /* Deep, deep black */
+    color: #e6c66a; /* Rich, metallic gold */
     font-family: Arial, sans-serif; 
     display: flex; 
     flex-direction: column; 
     align-items: center; 
     min-height: 100vh;
     overflow-x: hidden;
+    font-size: 24px; 
 }
 
-nav { width: 100%; padding: 30px 0; text-align: center; background: #0a0a0a; border-bottom: 1px solid #222; }
-nav a { color: #888; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 22px; }
+/* Nav is now Gold on Black */
+nav { width: 100%; padding: 30px 0; text-align: center; background: #000; border-bottom: 2px solid #e6c66a; }
+nav a { color: #fff; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 22px; }
+nav a:hover { color: #e6c66a; }
 
-/* The Header Section */
-.main-header {
-    text-align: center;
-    margin-top: 40px;
-    width: 100%;
-    padding: 0 20px;
-}
-
-h1 { 
-    font-size: clamp(32px, 8vw, 64px); /* Scales perfectly between mobile and laptop */
-    letter-spacing: 5px; 
-    margin: 0;
-}
-
-.tagline { font-size: 20px; color: #888; margin-top: 10px; letter-spacing: 2px; }
-
-/* The Interlaced 8 Container */
-.living-8-container {
-    margin: 40px 0;
-    height: 320px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.interlaced-8 {
+/* The Vinyl Artifact Container */
+.vinyl-artifact {
     position: relative;
-    width: 160px;
-    height: 280px;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 60px 40px;
+    border-radius: 50%; /* It is a perfect circle */
+    background: #0a0a0a; /* Inner label color */
+    
+    /* These shadows create the grooves in the black */
+    box-shadow: 
+        0 0 0 10px #0a0a0a, /* Spindle Buffer */
+        0 0 0 30px #050505, /* Groove Ring 1 */
+        0 0 0 32px #111, /* Groove Texture 1 */
+        0 0 0 60px #050505, /* Groove Ring 2 */
+        0 0 0 62px #111, /* Groove Texture 2 */
+        0 0 0 80px #e6c66a; /* The Outer Gold Ring */
+        
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #e6c66a; /* The Sovereign Gold Edge */
+}
+
+/* Gold Text Styles */
+h1 { font-size: 64px; color: #e6c66a; letter-spacing: 5px; text-transform: uppercase; text-align: center; }
+.tagline { font-size: 20px; color: #fff; margin-top: 10px; text-align: center; }
+
+/* Records remain white, pulsating in the very center */
+.interlaced-8 {
+    width: 140px;
+    height: 250px;
     animation: heartbeat 2s infinite ease-in-out;
+    margin: 40px 0;
 }
 
 .vinyl-record {
-    position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     background: #fff; 
     border-radius: 50%;
-    left: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     animation: spin 3s linear infinite;
-    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    box-shadow: 0 0 20px rgba(255,255,255,0.4);
 }
 
-.top-record { top: 0; }
-.bottom-record { bottom: 0; animation-direction: reverse; }
-
-.label { width: 45px; height: 45px; background: #000; border-radius: 50%; display: flex; justify-content: center; align-items: center; }
-.hole { width: 5px; height: 5px; background: #fff; border-radius: 50%; }
+.content-container { font-size: 24px; color: #fff; }
+.tool-grid p { font-size: 24px; margin-bottom: 20px; text-align: left; }
+.tool-grid p strong { color: #e6c66a; } /* Gold Job Labels */
 
 @keyframes heartbeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
 @keyframes spin { 100% { transform: rotate(360deg); } }
 
-/* Content Section - Unified Large Font for all pages */
-.content-container { 
-    max-width: 1000px; 
-    padding: 40px 20px; 
-    text-align: center; 
-    font-size: 24px; 
-    line-height: 1.6; 
+/* Mobile Scaling */
+@media (max-width: 600px) {
+    .vinyl-artifact { transform: scale(0.65); margin: 20px 0; }
+    h1 { font-size: 38px; }
+    .content-container { font-size: 20px; }
 }
-
-.tool-grid, .cleaning-section { 
-    text-align: left; 
-    background: #111; 
-    padding: 30px; 
-    border-radius: 15px; 
-    border: 1px solid #222; 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
