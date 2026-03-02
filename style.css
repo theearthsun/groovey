@@ -1,96 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PULSATIN8.COM | FOR THE LOVE OF VINYL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tribute-header">
+        FOR THE LOVE OF VINYL
+    </div>
 
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="cleaning.html">CLEANING</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
 
+    <div class="vinyl-artifact">
+        <div class="header-label">
+            <h1>PULSATIN8.COM</h1>
+            <p class="tagline">FOR 4 DIFFERENT JOBS</p>
+        </div>
 
+        <div class="pulsating-center">
+            <div class="interlaced-8">
+                <div class="vinyl-record top-record">
+                    <div class="label"><div class="hole"></div></div>
+                </div>
+                <div class="vinyl-record bottom-record">
+                    <div class="label"><div class="hole"></div></div>
+                </div>
+            </div>
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-/* Universal Reset & Biological Light Shift */
-* { box-sizing: border-box; }
-
-body { 
-    margin: 0; 
-    background-color: #050505; /* Deep, deep black */
-    color: #e6c66a; /* Rich, metallic gold */
-    font-family: Arial, sans-serif; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    min-height: 100vh;
-    overflow-x: hidden;
-    font-size: 24px; 
-}
-
-/* Nav is now Gold on Black */
-nav { width: 100%; padding: 30px 0; text-align: center; background: #000; border-bottom: 2px solid #e6c66a; }
-nav a { color: #fff; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 22px; }
-nav a:hover { color: #e6c66a; }
-
-/* The Vinyl Artifact Container */
-.vinyl-artifact {
-    position: relative;
-    max-width: 1000px;
-    margin: 60px auto;
-    padding: 60px 40px;
-    border-radius: 50%; /* It is a perfect circle */
-    background: #0a0a0a; /* Inner label color */
-    
-    /* These shadows create the grooves in the black */
-    box-shadow: 
-        0 0 0 10px #0a0a0a, /* Spindle Buffer */
-        0 0 0 30px #050505, /* Groove Ring 1 */
-        0 0 0 32px #111, /* Groove Texture 1 */
-        0 0 0 60px #050505, /* Groove Ring 2 */
-        0 0 0 62px #111, /* Groove Texture 2 */
-        0 0 0 80px #e6c66a; /* The Outer Gold Ring */
-        
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 3px solid #e6c66a; /* The Sovereign Gold Edge */
-}
-
-/* Gold Text Styles */
-h1 { font-size: 64px; color: #e6c66a; letter-spacing: 5px; text-transform: uppercase; text-align: center; }
-.tagline { font-size: 20px; color: #fff; margin-top: 10px; text-align: center; }
-
-/* Records remain white, pulsating in the very center */
-.interlaced-8 {
-    width: 140px;
-    height: 250px;
-    animation: heartbeat 2s infinite ease-in-out;
-    margin: 40px 0;
-}
-
-.vinyl-record {
-    width: 130px;
-    height: 130px;
-    background: #fff; 
-    border-radius: 50%;
-    animation: spin 3s linear infinite;
-    box-shadow: 0 0 20px rgba(255,255,255,0.4);
-}
-
-.content-container { font-size: 24px; color: #fff; }
-.tool-grid p { font-size: 24px; margin-bottom: 20px; text-align: left; }
-.tool-grid p strong { color: #e6c66a; } /* Gold Job Labels */
-
-@keyframes heartbeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
-@keyframes spin { 100% { transform: rotate(360deg); } }
-
-/* Mobile Scaling */
-@media (max-width: 600px) {
-    .vinyl-artifact { transform: scale(0.65); margin: 20px 0; }
-    h1 { font-size: 38px; }
-    .content-container { font-size: 20px; }
-}
+        <div class="content-container">
+            <div class="tool-grid">
+                <p><span class="color-bb">[1] BB | BASS BOOST</span> – highlights and enhances the lower sound waves</p>
+                <p><span class="color-ab">[2] AB | ACOUSTIC ACCORD</span> – midrange balance; Guitars and Piano to the forefront</p>
+                <p><span class="color-pp">[3] PP | PERCEPTION</span> – personified Highlights; Vocals and Cymbals sing</p>
+                <p><span class="color-ap">[4] AP | AUDIO PURE</span> – An EQ that brings the sound engineer's whole sound stage to the forefront!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 
 
 
