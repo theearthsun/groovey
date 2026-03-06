@@ -1,116 +1,57 @@
-/* Universal Reset & Sovereign Colors */
 * { box-sizing: border-box; }
+body { margin: 0; background-color: #050505; color: #e6c66a; font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; min-height: 100vh; overflow-x: hidden; }
 
-body { 
-    margin: 0; 
-    background-color: #050505; 
-    color: #e6c66a; 
-    font-family: Arial, sans-serif; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    min-height: 100vh;
-    overflow-x: hidden;
-    font-size: 24px; 
-}
+.tribute-header { width: 100%; text-align: center; padding: 15px 0; font-size: 16px; letter-spacing: 6px; color: #e6c66a !important; text-transform: uppercase; background: #000; border-bottom: 1px solid #111; font-weight: bold; }
+nav { width: 100%; padding: 20px 0; text-align: center; background: #000; border-bottom: 2px solid #e6c66a; }
+nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 18px; }
 
-/* Header Tribute */
-.tribute-header {
-    width: 100%;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 16px;
-    letter-spacing: 6px;
-    color: #e6c66a !important; 
-    text-transform: uppercase;
-    background: #000;
-    border-bottom: 1px solid #111;
-    font-weight: bold;
-}
-
-/* Nav Equilibrium */
-nav { 
-    width: 100%; 
-    padding: 30px 0; 
-    text-align: center; 
-    background: #000; 
-    border-bottom: 2px solid #e6c66a; 
-}
-
-nav a { 
-    color: #fff; 
-    text-decoration: none; 
-    margin: 0 20px; 
-    font-weight: bold; 
-    font-size: 22px; 
-}
-
-nav a:hover { color: #e6c66a; }
-
-/* The Vinyl Artifact - Perfect Circle logic for Desktop */
+/* Desktop Artifact */
 .vinyl-artifact {
     position: relative;
-    width: 900px;
-    height: 900px;
-    margin: 60px auto;
+    width: 850px;
+    height: 850px;
+    margin: 40px auto;
     border-radius: 50%;
     background: #0a0a0a;
-    box-shadow: 
-        0 0 0 10px #0a0a0a,
-        0 0 0 30px #050505,
-        0 0 0 32px #181818,
-        0 0 0 60px #050505,
-        0 0 0 62px #181818,
-        0 0 0 80px #e6c66a;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid #e6c66a;
-    padding: 80px;
+    box-shadow: 0 0 0 10px #0a0a0a, 0 0 0 30px #050505, 0 0 0 32px #181818, 0 0 0 60px #050505, 0 0 0 62px #181818, 0 0 0 80px #e6c66a;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; border: 3px solid #e6c66a; padding: 60px;
 }
 
-h1 { font-size: 64px; color: #e6c66a !important; letter-spacing: 5px; text-transform: uppercase; margin: 0; text-align: center;}
-.tagline { font-size: 22px; color: #fff; margin-top: 10px; text-align: center;}
+h1 { font-size: 50px; color: #e6c66a !important; letter-spacing: 4px; text-transform: uppercase; margin: 0; text-align: center; }
+.tagline { font-size: 18px; color: #fff; margin-top: 5px; }
 
-/* The Interlaced 8 */
-.interlaced-8 { width: 140px; height: 250px; animation: heartbeat 2s infinite ease-in-out; margin: 20px 0; display: flex; flex-direction: column; align-items: center; }
-.vinyl-record { width: 120px; height: 120px; background: #fff; border-radius: 50%; animation: spin 3s linear infinite; box-shadow: 0 0 20px rgba(255,255,255,0.4); display: flex; justify-content: center; align-items: center; margin-bottom: -20px;}
-.label { width: 40px; height: 40px; background: #000; border-radius: 50%; display: flex; justify-content: center; align-items: center; }
-.hole { width: 5px; height: 5px; background: #fff; border-radius: 50%; }
+.interlaced-8 { width: 120px; height: 220px; animation: heartbeat 2s infinite ease-in-out; margin: 20px 0; display: flex; flex-direction: column; align-items: center; }
+.vinyl-record { width: 100px; height: 100px; background: #fff; border-radius: 50%; animation: spin 3s linear infinite; box-shadow: 0 0 15px rgba(255,255,255,0.4); display: flex; justify-content: center; align-items: center; margin-bottom: -15px; }
+.label { width: 30px; height: 30px; background: #000; border-radius: 50%; display: flex; justify-content: center; align-items: center; }
+.hole { width: 4px; height: 4px; background: #fff; border-radius: 50%; }
 
-/* The Chromatic Protocol - Colored Text */
-.content-container { width: 100%; color: #fff; text-align: center; }
-.tool-grid p { font-size: 22px; margin-bottom: 20px; font-weight: bold; line-height: 1.4; }
+.content-container { width: 100%; color: #fff; text-align: center; padding: 0 20px; }
+.tool-grid p { font-size: 20px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; }
 
-.color-bb { color: #ff0000 !important; } /* RED */
-.color-ab-yellow { color: #ffff00 !important; } /* YELLOW */
-.color-ab-green { color: #00ff00 !important; } /* GREEN */
-.color-pp-blue { color: #00bfff !important; } /* BLUE */
-.color-ap { color: #ffff00 !important; } /* BRIGHT YELLOW */
+/* The Chromatic Equilibrium */
+.color-bb { color: #ff0000 !important; }
+.color-ab-yellow { color: #ffff00 !important; }
+.color-ab-green { color: #00ff00 !important; }
+.color-pp-blue { color: #00bfff !important; }
+.color-ap { color: #ffff00 !important; }
 
-/* Animations */
 @keyframes heartbeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
 @keyframes spin { 100% { transform: rotate(360deg); } }
 
-/* Mobile Scaling - Anti-Squeeze Protocol */
+/* The Sovereign Mobile Circle - ASPECT RATIO LOCK */
 @media (max-width: 768px) {
     .vinyl-artifact { 
-        width: 92vw; 
-        height: 92vw; 
-        padding: 40px 15px;
-        box-shadow: 
-            0 0 0 5px #0a0a0a,
-            0 0 0 15px #050505,
-            0 0 0 16px #181818,
-            0 0 0 25px #050505,
-            0 0 0 26px #181818,
-            0 0 0 35px #e6c66a; 
+        width: 90vw !important; 
+        height: auto !important; 
+        aspect-ratio: 1 / 1 !important; /* Forces a perfect circle regardless of screen height */
+        padding: 30px 10px; 
+        margin: 40px auto; 
+        box-shadow: 0 0 0 5px #0a0a0a, 0 0 0 12px #050505, 0 0 0 13px #181818, 0 0 0 22px #050505, 0 0 0 23px #181818, 0 0 0 32px #e6c66a; 
     }
-    h1 { font-size: 26px !important; }
-    .tagline { font-size: 14px; }
-    .tool-grid p { font-size: 13px !important; margin-bottom: 8px; }
-    .interlaced-8 { transform: scale(0.5); margin: 0; height: 160px; }
+    h1 { font-size: 22px !important; }
+    .tagline { font-size: 11px; }
+    .tool-grid p { font-size: 11px !important; margin-bottom: 5px; line-height: 1.2; }
+    .interlaced-8 { transform: scale(0.4); height: 130px; margin: 0; }
 }
 
 
