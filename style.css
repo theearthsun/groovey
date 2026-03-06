@@ -1,52 +1,59 @@
+/* Universal Reset */
 * { box-sizing: border-box; }
 body { margin: 0; background-color: #050505; color: #e6c66a; font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; min-height: 100vh; overflow-x: hidden; }
 
+/* Fixed Header and Nav space */
 .tribute-header { width: 100%; text-align: center; padding: 15px 0; font-size: 16px; letter-spacing: 6px; color: #e6c66a !important; text-transform: uppercase; background: #000; border-bottom: 1px solid #111; font-weight: bold; }
-nav { width: 100%; padding: 20px 0; text-align: center; background: #000; border-bottom: 2px solid #e6c66a; }
-nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 18px; }
+nav { width: 100%; padding: 25px 0; text-align: center; background: #000; position: relative; z-index: 10; }
+nav a { color: #fff; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 20px; }
+nav a:hover { color: #e6c66a; }
 
-/* Desktop Artifact */
+/* The Vinyl Artifact - Positioned to clear the Nav */
 .vinyl-artifact {
     position: relative;
     width: 850px;
     height: 850px;
-    margin: 40px auto;
+    margin: 80px auto; /* Increased margin to move away from Nav */
     border-radius: 50%;
     background: #0a0a0a;
     box-shadow: 0 0 0 10px #0a0a0a, 0 0 0 30px #050505, 0 0 0 32px #181818, 0 0 0 60px #050505, 0 0 0 62px #181818, 0 0 0 80px #e6c66a;
     display: flex; flex-direction: column; align-items: center; justify-content: center; border: 3px solid #e6c66a; padding: 60px;
+    z-index: 1;
 }
 
 h1 { font-size: 50px; color: #e6c66a !important; letter-spacing: 4px; text-transform: uppercase; margin: 0; text-align: center; }
-.tagline { font-size: 18px; color: #fff; margin-top: 5px; }
+.tagline { font-size: 18px; color: #fff; margin-top: 5px; letter-spacing: 2px; }
 
+/* The Interlaced 8 */
 .interlaced-8 { width: 120px; height: 220px; animation: heartbeat 2s infinite ease-in-out; margin: 20px 0; display: flex; flex-direction: column; align-items: center; }
 .vinyl-record { width: 100px; height: 100px; background: #fff; border-radius: 50%; animation: spin 3s linear infinite; box-shadow: 0 0 15px rgba(255,255,255,0.4); display: flex; justify-content: center; align-items: center; margin-bottom: -15px; }
 .label { width: 30px; height: 30px; background: #000; border-radius: 50%; display: flex; justify-content: center; align-items: center; }
 .hole { width: 4px; height: 4px; background: #fff; border-radius: 50%; }
 
+/* The Chromatic Protocol */
 .content-container { width: 100%; color: #fff; text-align: center; padding: 0 20px; }
 .tool-grid p { font-size: 20px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; }
 
-/* The Chromatic Equilibrium */
 .color-bb { color: #ff0000 !important; }
 .color-ab-yellow { color: #ffff00 !important; }
 .color-ab-green { color: #00ff00 !important; }
 .color-pp-blue { color: #00bfff !important; }
 .color-ap { color: #ffff00 !important; }
 
+/* Animations */
 @keyframes heartbeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
 @keyframes spin { 100% { transform: rotate(360deg); } }
 
-/* The Sovereign Mobile Circle - ASPECT RATIO LOCK */
+/* Mobile Sovereign Circle Fix */
 @media (max-width: 768px) {
+    nav a { margin: 0 10px; font-size: 16px; }
     .vinyl-artifact { 
         width: 90vw !important; 
         height: auto !important; 
-        aspect-ratio: 1 / 1 !important; /* Forces a perfect circle regardless of screen height */
-        padding: 30px 10px; 
+        aspect-ratio: 1 / 1 !important; /* Forces perfect circle on mobile */
         margin: 40px auto; 
-        box-shadow: 0 0 0 5px #0a0a0a, 0 0 0 12px #050505, 0 0 0 13px #181818, 0 0 0 22px #050505, 0 0 0 23px #181818, 0 0 0 32px #e6c66a; 
+        padding: 30px 15px;
+        box-shadow: 0 0 0 5px #0a0a0a, 0 0 0 12px #050505, 0 0 0 13px #181818, 0 0 0 22px #050505, 0 0 0 23px #181818, 0 0 0 35px #e6c66a; 
     }
     h1 { font-size: 22px !important; }
     .tagline { font-size: 11px; }
