@@ -1,14 +1,11 @@
 
-/* Universal Reset */
 * { box-sizing: border-box; }
 body { margin: 0; background-color: #050505; color: #e6c66a; font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; min-height: 100vh; overflow-x: hidden; }
 
-/* Header & Nav */
 .tribute-header { width: 100%; text-align: center; padding: 15px 0; font-size: 16px; letter-spacing: 6px; color: #e6c66a !important; text-transform: uppercase; background: #000; border-bottom: 1px solid #111; font-weight: bold; }
 nav { width: 100%; padding: 25px 0; text-align: center; background: #000; position: relative; z-index: 10; }
 nav a { color: #fff; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 20px; }
 
-/* The Vinyl Artifact (Desktop) */
 .vinyl-artifact {
     position: relative;
     width: 850px;
@@ -20,17 +17,15 @@ nav a { color: #fff; text-decoration: none; margin: 0 20px; font-weight: bold; f
     display: flex; flex-direction: column; align-items: center; justify-content: center; border: 3px solid #e6c66a; padding: 60px;
 }
 
-.header-label { width: 100%; text-align: center; }
-h1 { font-size: 50px; color: #e6c66a !important; letter-spacing: 4px; text-transform: uppercase; margin: 0; }
-.tagline { font-size: 18px; color: #fff; margin-top: 5px; letter-spacing: 2px; display: block; width: 100%; text-align: center; }
+.white-title { color: #ffffff !important; font-size: 50px; letter-spacing: 4px; text-transform: uppercase; margin: 0; text-align: center; }
+.tagline { font-size: 18px; color: #fff; margin-top: 5px; letter-spacing: 2px; text-align: center; width: 100%; display: block; }
 
-/* The Interlaced 8 */
-.interlaced-8 { width: 120px; height: 220px; animation: heartbeat 2s infinite ease-in-out; margin: 20px 0; display: flex; flex-direction: column; align-items: center; }
-.vinyl-record { width: 100px; height: 100px; background: #fff; border-radius: 50%; animation: spin 3s linear infinite; box-shadow: 0 0 15px rgba(255,255,255,0.4); display: flex; justify-content: center; align-items: center; margin-bottom: -15px; }
+/* The Interlaced 8 - Circular Lock */
+.interlaced-8 { width: 120px; height: 210px; animation: heartbeat 2s infinite ease-in-out; margin: 10px 0; display: flex; flex-direction: column; align-items: center; }
+.vinyl-record { width: 100px; height: 100px; aspect-ratio: 1/1; background: #fff; border-radius: 50%; animation: spin 3s linear infinite; box-shadow: 0 0 15px rgba(255,255,255,0.4); display: flex; justify-content: center; align-items: center; margin-bottom: -10px; }
 .label { width: 30px; height: 30px; background: #000; border-radius: 50%; display: flex; justify-content: center; align-items: center; }
 .hole { width: 4px; height: 4px; background: #fff; border-radius: 50%; }
 
-/* The Chromatic Protocol */
 .content-container { width: 100%; color: #fff; text-align: center; padding: 0 20px; }
 .tool-grid p { font-size: 20px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; }
 
@@ -43,23 +38,22 @@ h1 { font-size: 50px; color: #e6c66a !important; letter-spacing: 4px; text-trans
 @keyframes heartbeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
 @keyframes spin { 100% { transform: rotate(360deg); } }
 
-/* Mobile Sovereign Circle (The Correction) */
+/* Mobile Sovereign Calibration */
 @media (max-width: 768px) {
-    nav a { margin: 0 10px; font-size: 16px; }
     .vinyl-artifact { 
-        width: 92vw !important; 
-        height: 92vw !important; 
+        width: 94vw !important; 
+        height: 94vw !important; 
         aspect-ratio: 1 / 1 !important; 
-        margin: 40px auto; 
-        padding: 30px 15px;
-        box-shadow: 0 0 0 5px #0a0a0a, 0 0 0 12px #050505, 0 0 0 13px #181818, 0 0 0 22px #050505, 0 0 0 23px #181818, 0 0 0 35px #e6c66a; 
+        margin: 20px auto; 
+        padding: 20px 10px;
+        box-shadow: 0 0 0 5px #0a0a0a, 0 0 0 12px #050505, 0 0 0 13px #181818, 0 0 0 22px #050505, 0 0 0 23px #181818, 0 0 0 32px #e6c66a; 
     }
-    h1 { font-size: 22px !important; }
-    .tagline { font-size: 11px; }
-    .tool-grid p { font-size: 11px !important; margin-bottom: 5px; line-height: 1.2; }
+    .white-title { font-size: 24px !important; margin-bottom: 2px; }
+    .tagline { font-size: 11px; margin-bottom: 10px; }
+    .tool-grid p { font-size: 11px !important; margin-bottom: 4px; line-height: 1.1; }
     
-    /* Shrinking the 8 on mobile to reveal BB text */
-    .interlaced-8 { transform: scale(0.35); height: 110px; margin: -10px 0; }
+    /* Shrinking and lifting the 8 to prevent overlap */
+    .interlaced-8 { transform: scale(0.3); height: 80px; margin: -20px 0 10px 0; }
 }
 
 
