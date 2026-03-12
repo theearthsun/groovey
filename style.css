@@ -1,3 +1,4 @@
+
 /* Universal Reset */
 * { box-sizing: border-box; }
 body { margin: 0; background-color: #050505; color: #e6c66a; font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; min-height: 100vh; overflow-x: hidden; }
@@ -39,16 +40,15 @@ h1 { font-size: 50px; color: #e6c66a !important; letter-spacing: 4px; text-trans
 .color-pp-blue { color: #00bfff !important; }
 .color-ap { color: #ffff00 !important; }
 
-/* Animations */
 @keyframes heartbeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
 @keyframes spin { 100% { transform: rotate(360deg); } }
 
-/* Mobile Sovereign Circle (The Final Fix) */
+/* Mobile Sovereign Circle (The Correction) */
 @media (max-width: 768px) {
     nav a { margin: 0 10px; font-size: 16px; }
     .vinyl-artifact { 
         width: 92vw !important; 
-        height: 92vw !important; /* This forces the height to match width, fixing the oval */
+        height: 92vw !important; 
         aspect-ratio: 1 / 1 !important; 
         margin: 40px auto; 
         padding: 30px 15px;
@@ -57,9 +57,10 @@ h1 { font-size: 50px; color: #e6c66a !important; letter-spacing: 4px; text-trans
     h1 { font-size: 22px !important; }
     .tagline { font-size: 11px; }
     .tool-grid p { font-size: 11px !important; margin-bottom: 5px; line-height: 1.2; }
-    .interlaced-8 { transform: scale(0.4); height: 130px; margin: 0; }
+    
+    /* Shrinking the 8 on mobile to reveal BB text */
+    .interlaced-8 { transform: scale(0.35); height: 110px; margin: -10px 0; }
 }
-
 
 
 
